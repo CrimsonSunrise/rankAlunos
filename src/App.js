@@ -25,6 +25,7 @@ function App() {
 	const [nome, setNome] = useState('');
 	const [rank, setRank] = useState('');
 	const [error, setError] = useState('Usuário não encontrado');
+	const [podeEnviar, setPodeEnviar] = useState(false);
 	
 	function getUser(e) {
 		jsonFile.map(item => {
@@ -107,6 +108,8 @@ function App() {
 			user_email: email,
 			from_name: "Glimpse bot"
 		};
+		
+		button.current.disabled = 'disabled';
 		
 		emailjs.send('service_k3k8gbp', 'template_6lob0an', templateParams)
 			.then(function(response) {
