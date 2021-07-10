@@ -2,23 +2,29 @@ import React, { useRef, useState } from 'react';
 import './App.css';
 import {FaCrown} from 'react-icons/fa'
 
+// Declara o arquivo dados.json
 let jsonFile = require("./dados.json")
 
+// Pré-atribuições dos dados
 let Nome = '';
 let Email = '';
 let Rank = '';
 
 function App() {
 	
+	// Declaração de referências
 	const emailInput = useRef();
 	const button = useRef();
 	const showRank = useRef();
 	const msg = useRef();
+	
+	// Declaração de estados
 	const [email, setEmail] = useState();
 	const [nome, setNome] = useState('');
 	const [rank, setRank] = useState('');
 	const [error, setError] = useState('');
 	
+	// Função para procurar o usuário no arquivo dados.json
 	function getUser(e) {
 		jsonFile.map(item => {
 			if(item["Email"] === e) {
@@ -32,6 +38,7 @@ function App() {
 		})
 	}
 	
+	// Verificar se o email é válido
 	const checarEmail = (e) => {
 		if(e.indexOf("@") > -1 && e.indexOf(".") > -1) {
 			button.current.className = 'active';
@@ -41,11 +48,14 @@ function App() {
 		setEmail(e);
 	}
 	
+	// Iniciar a verificação do rank
 	const verificarRank = () => {
 		getUser(email)
 		if(Email === email) {
+			// Mostrar a página de sucesso
 			showRank.current.className = 'showRank active';
 		} else {
+			// Informa que o email não foi encontrado no arquivo dados.json
 			msg.current.className = 'msg active';
 			setError("Email não encontrado!")
 			setTimeout(() => {
@@ -54,6 +64,8 @@ function App() {
 		}
 	}
 	
+	
+	// Renderização caso o usuário buscado estiver em primeiro lugar
 	const PrimeiroLugar = () => {
 		return (
 			<>
@@ -74,6 +86,7 @@ function App() {
 		)
 	}
 	
+	// Renderização para demais lugares
 	const DemaisLugares = () => {
 		return (
 			<>
@@ -95,7 +108,7 @@ function App() {
 	
 	return (
 		<>
-			
+			{/* Popup para mostrar alertas */}
 			<div ref={msg} className="msg">
 				{error}
 			</div>
