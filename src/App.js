@@ -91,7 +91,7 @@ function App() {
 	
 	function handleSubmit () {
 		var templateParams = {
-			to_name: 'João',
+			to_name: Nome.split(' ')[0],
 			message: criarCodigo(6),
 			user_email: email,
 			from_name: "Glimpse bot"
@@ -126,7 +126,7 @@ function App() {
 				
 				<div ref={checkCode} className="checkCode">
 					
-					<h2> {rank} Enviamos um email com um código de confirmação para <b>joaoalan15@hotmail.com</b>. Insira o código no campo abaixo para continuar.</h2>
+					<h2> {rank} Enviamos um email com um código de confirmação para <b>email</b>. Insira o código no campo abaixo para continuar.</h2>
 					<div className="inputs">
 						<input ref={codeInput} onChange={(e) => { checarCode(e.target.value) }} type="email" placeholder="código de verificação" spellCheck="false"></input>
 						<button ref={buttonCode} onClick={verificarCodigo} className="">Continuar</button>
