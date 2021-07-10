@@ -21,13 +21,14 @@
 	flex-direction: column;
 }
 
-h1 {
+.content h1 {
 	text-align: center;
 	color: white;
 	font-weight: 400;
+  padding: 10px;
 }
 
-h3 {
+.content h3 {
 	color: rgba(255, 255, 255, 0.7);
 	font-weight: 400;
 }
