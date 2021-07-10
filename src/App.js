@@ -111,11 +111,8 @@ function App() {
 		
 		button.current.disabled = 'disabled';
 		
-		emailjs.send('service_k3k8gbp', 'template_6lob0an', templateParams)
-			.then(function(response) {
+		emailjs.send('service_k3k8gbp', 'template_6lob0an', templateParams).then(function(response) {
 				setCodigoVerificacao(templateParams.message);
-				//console.log(codigoVerificacao)
-				//console.log('SUCCESS!', response.status, response.text);
 				checkCode.current.className = 'checkCode active';
 			}, function(error) {
 				msg.current.className = 'msg active';
@@ -128,7 +125,7 @@ function App() {
 	
 	return (
 		<>
-		
+			
 			<div ref={msg} className="msg">
 				{error}
 			</div>
@@ -157,7 +154,7 @@ function App() {
 					
 				</div>
 				
-				<div ref={showRank} className="showRank">
+				<div ref={showRank} className="showRank active">
 					
 					<h1>Parabéns!</h1>
 					

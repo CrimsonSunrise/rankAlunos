@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Página para visualizar o rank de alunos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi criado com [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

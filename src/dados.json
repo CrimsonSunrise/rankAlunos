@@ -1,0 +1,32 @@
+[
+    {
+        "Nome": "Aluno A",
+        "Email": "alunoa@escola.com",
+        "Nota": 5
+    },
+    {
+        "Nome": "Aluno B",
+        "Email": "alunob@escola.com",
+        "Nota": 4
+    },
+    {
+        "Nome": "Aluno C",
+        "Email": "alunoc@escola.com",
+        "Nota": 3
+    },
+    {
+        "Nome": "Aluno D",
+        "Email": "alunod@escola.com",
+        "Nota": 2
+    },
+    {
+        "Nome": "Aluno E",
+        "Email": "alunoe@escola.com",
+        "Nota": 1
+    },
+    {
+        "Nome": "Aluno F",
+        "Email": "alunof@escola.com",
+        "Nota": 0
+    }
+]
