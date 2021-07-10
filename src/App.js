@@ -18,11 +18,13 @@ function App() {
 	const buttonCode = useRef();
 	const checkCode = useRef();
 	const showRank = useRef();
+	const msg = useRef();
 	const [email, setEmail] = useState();
 	const [codigoVerificacao, setCodigoVerificacao] = useState();
 	const [codigo, setCodigo] = useState();
 	const [nome, setNome] = useState('');
 	const [rank, setRank] = useState('');
+	const [error, setError] = useState('Usuário não encontrado');
 	
 	function getUser(e) {
 		jsonFile.map(item => {
@@ -66,7 +68,11 @@ function App() {
 			showRank.current.className = 'showRank active';
 			
 		} else {
-			
+			msg.current.className = 'msg active';
+			setError("Código incorreto!")
+			setTimeout(() => {
+				msg.current.className = 'msg';
+			}, 4000)
 		}
 	}
 	
@@ -75,7 +81,12 @@ function App() {
 		if(Email === email) {
 			handleSubmit();
 		} else {
-			console.log("Seu email não foi encontrado")
+			//console.log("Seu email não foi encontrado")
+			msg.current.className = 'msg active';
+			setError("Email não encontrado!")
+			setTimeout(() => {
+				msg.current.className = 'msg';
+			}, 4000)
 		}
 	}
 	
@@ -104,12 +115,21 @@ function App() {
 				//console.log('SUCCESS!', response.status, response.text);
 				checkCode.current.className = 'checkCode active';
 			}, function(error) {
-				//console.log('FAILED...', error);
+				msg.current.className = 'msg active';
+				setError("Houve um erro ao enviar o email.")
+				setTimeout(() => {
+					msg.current.className = 'msg';
+				}, 4000)
 		});
 	}
 	
 	return (
 		<>
+		
+			<div ref={msg} className="msg">
+				{error}
+			</div>
+		
 			<div className="mainApp">
 				
 				<div className="content">
