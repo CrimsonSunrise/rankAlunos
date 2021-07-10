@@ -17,4 +17,6 @@ Inicia o projeto em modo desenvolvedor.\
 Abra [http://localhost:3000](http://localhost:3000) para ver a página no seu browser.
 
 A página irá se atualizar caso você a edite.\
-Todos os errros e alertas estarão visíveis no console do navegador.
+Todos os errros e alertas estarão visíveis no console do navegador.\
+
+Qualquer dúvida estou à disposção!
