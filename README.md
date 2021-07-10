@@ -4,7 +4,12 @@ Este projeto foi criado com [Create React App](https://github.com/facebook/creat
 
 ## Como iniciar
 
-No diretório do projeto, você pode iniciá-lo com o seguinte comando:
+Primeiro, você precisa preparar o ambiente com os módulos necessários.\
+Execute o seguinte comando no diretório do projeto:
+
+### `npm install`
+
+Depois de instalar todas as dependências, inicie o projeto com o seguinte comando:
 
 ### `npm start`
 

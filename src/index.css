@@ -186,7 +186,6 @@ button:active {
 .rank.active {
 	background-color: white;
 	transform: scale(1.1);
-	margin-bottom: 3px;
 }
 
 .rank.active .rankPos {
@@ -211,64 +210,4 @@ button:active {
 	top: -25px;
 	transform: rotateZ(45deg);
 	filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.452))
-}
-
-.projectDetails {
-	display: inline-block;
-	position: absolute;
-	bottom: 10px;
-	text-align: center;
-	background-color: rgba(255, 255, 255, 0.089);
-	border-radius: 5px;
-	padding: 10px;
-}
-
-.projectDetails h2 {
-	color: white;
-	font-weight: 400;
-}
-
-.projectDetails p {
-	color: rgba(255, 255, 255, 0.767);
-	margin: 10px;
-	line-height: 25px;
-}
-
-.projectDetails a {
-	color: white;
-	background-color: #614EFF;
-	padding: 2px 7px;
-	border-radius: 5px;
-	text-decoration: none;
-}
-
-.projectDetails span {
-	color: white;
-	background-color: #614EFF;
-	padding: 2px 7px;
-	border-radius: 5px;
-	text-decoration: none;
-}
-
-.projectDetails a:hover {
-	background-color: #f12b66;
-}
-
-.msg {
-	transition: 0.2s all;
-	position: absolute;
-	z-index: 999;
-	right: 30px;
-	top: -100px;
-	padding: 10px 25px;
-	background-color: white;
-	border-radius: 5px;
-	color: #f12b66;
-	font-weight: bold;
-	opacity: 0;
-}
-
-.msg.active {
-	top: 30px;
-	opacity: 1;
 }
