@@ -21,7 +21,7 @@ Todos os errros e alertas estarão visíveis no console do navegador.
 
 ## Live preview
 
-Acesse [https://rankalunos.vercel.app/](https://rankalunos.vercel.app/) para visualizar um exemplo.
+Acesse [https://rank-alunos.vercel.app/](https://rank-alunos.vercel.app/) para visualizar um exemplo.
 
 Você pode buscar dados do rank inserindo um dos emails listados abaixo:
 
